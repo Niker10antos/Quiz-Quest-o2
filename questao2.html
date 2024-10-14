@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Quiz - Questão 2</title>
+</head>
+
+<body>
+    <p>Pergunta 2: Qual é a capital da França?</p>
+    <form action="">
+        <input type="radio" id="alternativa1" name="alternativa2" value="alternativa1">
+        <label for="alternativa1">Madrid</label><br>
+        <input type="radio" id="alternativa2" name="alternativa2" value="alternativa2">
+        <label for="alternativa2">Paris</label><br>
+        <input type="radio" id="alternativa3" name="alternativa2" value="alternativa3">
+        <label for="alternativa3">Londres</label><br><br>
+        <input type="button" onclick="ChecarResposta2()" value="Checar resposta"><br>
+    </form>
+    
+    <script>
+        function ChecarResposta2() {
+            const alternativaCorreta = "alternativa2";
+            const opcaoEscolhida = document.querySelector('input[name="alternativa2"]:checked');
+            if (opcaoEscolhida) {
+                if (opcaoEscolhida.value === alternativaCorreta) {
+                    alert("Resposta correta");
+                    window.location.href = 'final.html'; // Redireciona para a próxima página ou finaliza o quiz
+                } else {
+                    alert("Resposta incorreta. Tente novamente.");
+                }
+            } else {
+                alert("Escolha uma alternativa");
+            }
+        }
+    </script>
+</body>
+
+</html>
